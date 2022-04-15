@@ -1,0 +1,34 @@
+{
+  "name": "grammy-bot-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "tsc --skipLibCheck && node dist/index.js",
+    "build-ts": "tsc --skipLibCheck",
+    "watch-ts": "tsc -w --skipLibCheck"
+  },
+  "keywords": [
+    "telegram",
+    "bot",
+    "grammy",
+    "grammyjs",
+    "ts"
+  ],
+  "author": "askador",
+  "license": "ISC",
+  "dependencies": {
+    "@grammyjs/hydrate": "1.0.3",
+    "@grammyjs/parse-mode": "1.1.2",
+    "@grammyjs/transformer-throttler": "1.1.1",
+    "dotenv": "^10.0.0",
+    "grammy": "1.7.3",
+    "typescript": "4.6.2",
+    "winston": "^3.7.2"
+  },
+  "devDependencies": {
+    "@types/node": "17.0.23",
+    "@typescript-eslint/eslint-plugin": "5.17.0",
+    "@typescript-eslint/parser": "5.17.0"
+  }
+}
