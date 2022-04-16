@@ -13,7 +13,8 @@ async function onStartup(botInfo: UserFromGetMe): Promise<void> {
 
   await database.setup()
 
-  // It is recommended that you do this only when you run the bot first time
+  // It is recommended that you do this only when you launch the bot first time
+  // then you can just comment out that line
   //
   await botCommands.setup(bot)
 
@@ -23,7 +24,7 @@ async function onStartup(botInfo: UserFromGetMe): Promise<void> {
 
   await handlers.setup(bot)
 
-  logger.info(`Starting the bot`)
+  logger.info("Starting the bot")
   console.log(botInfo)
 }
 
