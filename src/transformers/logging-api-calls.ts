@@ -1,6 +1,7 @@
 import { ApiCallFn, Methods, Payload, RawApi } from "grammy/out/core/client"
 import { AbortSignal } from "grammy/out/shim.node"
 import { ApiResponse } from "@grammyjs/types"
+import {logger} from '../utils'
 
 async function loggingApiCalls(
   prev: ApiCallFn,
@@ -8,7 +9,7 @@ async function loggingApiCalls(
   payload: Payload<Methods<RawApi>, RawApi>,
   signal: AbortSignal
 ): Promise<ApiResponse<any>> {
-  console.log("Called", method, "with payload", payload)
+  logger.debug("Called", method, "with payload", payload)
   return prev(method, payload, signal)
 }
 
