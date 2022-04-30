@@ -9,7 +9,7 @@ async function loggingApiCalls(
   payload: Payload<Methods<RawApi>, RawApi>,
   signal: AbortSignal
 ): Promise<ApiResponse<any>> {
-  logger.debug("Called", method, "with payload", payload)
+  logger.debug(`Called ${method} with payload ${JSON.stringify(payload)}`)
   return prev(method, payload, signal)
 }
 
