@@ -14,7 +14,7 @@ async function errorHandler(err: BotError<MyContext>) {
   } else if (e instanceof GrammyError) {
     logger.error(`Error in request: ${e.description}`)
   } else if (e instanceof HttpError) {
-    logger.error(`Could not contact Telegram: ${e}`, )
+    logger.error(`Could not contact Telegram: ${e}`)
   } else {
     logger.error(`Unknown error: ${e}`)
   }
